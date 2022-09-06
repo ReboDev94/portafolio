@@ -3,9 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  scroll-behavior: smooth;
-}
 
 body {
   @apply bg-r-dark text-r-white;
