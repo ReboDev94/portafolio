@@ -1,4 +1,5 @@
-import Buttom from "../ui/components/Buttom";
+import { Link } from "react-scroll";
+import Buttom from "../ui/components/Button";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
               alt="linkedin"
             />
           </a>
+
           <a
             href="https://www.facebook.com/rebolledohernandez/"
             target="_blank"
@@ -37,6 +39,13 @@ const Home = () => {
               className="h-7 w-7"
               alt="facebook"
             />
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=7471333871"
+            target="_blank"
+            referrerPolicy="no-referrer"
+          >
+            <img src="/assets/svg/phone.svg" className="h-7 w-7" alt="phone" />
           </a>
           <a href="mailto:rrrrebolledohdz@gmail.com">
             <img src="/assets/svg/email.svg" className="h-7 w-7" alt="email" />
@@ -49,9 +58,20 @@ const Home = () => {
             <p>Rebolledo Hernández</p>
           </span>
           <p className="text-lg font-bold text-r-white">Full Stack Developer</p>
-          <span>
-            <Buttom>Contactame</Buttom>
-          </span>
+          <div className="flex gap-2">
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              <Buttom>Contactame</Buttom>
+            </Link>
+            <a>
+              <Buttom>CV</Buttom>
+            </a>
+          </div>
         </div>
       </div>
       <div className="w-2/6 flex justify-center items-center">
