@@ -13,8 +13,5 @@ npm run dev
 ### deploy
 
 ```
-git add .
-git commit -m "un-nombre"
-npm run build
 npm run deploy
 ```

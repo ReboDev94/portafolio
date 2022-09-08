@@ -2,9 +2,9 @@ import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
-    <nav className="h-20 grid content-center w-full sticky top-0 bg-r-dark">
+    <nav className="h-20 grid content-center w-full sticky top-0 bg-r-dark ">
       <div className="flex justify-between">
-        <div className="flex gap-14 text-r-white text-base font-extrabold">
+        <div className="flex gap-8 xl:gap-14 text-r-white font-extrabold">
           <h1 className="text-r-primary text-xl">{"<ReboDev />"}</h1>
           <Link
             to="home"
@@ -26,17 +26,6 @@ const Navbar = () => {
             className="hover:text-r-primary cursor-pointer"
           >
             Sobre mi
-          </Link>
-
-          <Link
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-            className="hover:text-r-primary cursor-pointer"
-          >
-            Habilidades
           </Link>
 
           <Link

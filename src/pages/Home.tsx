@@ -2,7 +2,7 @@ import Buttom from "../ui/components/Buttom";
 
 const Home = () => {
   return (
-    <section id="home" className="h-[calc(100vh-5rem)] flex">
+    <section id="home" className="min-h-[calc(100vh-5rem)] flex">
       <div className="w-4/6 flex flex-nowrap gap-5">
         <div className="flex flex-col items-center justify-center gap-5 w-14 h-full">
           <a

@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section id="about" className="h-[calc(100vh-5rem)]">
+    <section id="about" className="min-h-[calc(100vh-5rem)]">
       <div className="flex flex-wrap">
         <div className="w-1/2">
           <h1 className="text-r-primary font-extrabold text-3xl">Sobre mi</h1>

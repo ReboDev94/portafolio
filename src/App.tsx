@@ -12,8 +12,8 @@ const App = () => {
       <div className="px-24">
         <Home />
         <About />
-        {/*
         <Skills />
+        {/*
         <Projects />
       <Contact /> */}
       </div>
