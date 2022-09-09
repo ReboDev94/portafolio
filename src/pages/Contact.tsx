@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import axios from "axios";
 import Buttom from "../ui/components/Button";
 
 const initData = {
@@ -7,6 +8,8 @@ const initData = {
   message: "",
 };
 const Contact = () => {
+  const [messageSend, setMessageSend] = useState("");
+  const [loading, setLoading] = useState(false);
   const [formContact, setFormContact] = useState(initData);
   const { name, email, message } = formContact;
 
@@ -19,8 +22,26 @@ const Contact = () => {
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
-
-    console.log("hola");
+    setLoading(true);
+    setMessageSend("");
+    axios({
+      method: "POST",
+      url: "https://formbold.com/s/6QO53",
+      data: formContact,
+    })
+      .then((r) => {
+        setMessageSend(
+          "He recibido tu mensaje, muy pronto me pondre en contacto contigo, gracias."
+        );
+        setFormContact(initData);
+      })
+      .catch((r) => {
+        setMessageSend("Ocurrio un error, por favor intentalo mas tarde");
+        console.log("error");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -33,6 +54,11 @@ const Contact = () => {
       </p>
       <div className="mt-5 flex flex-wrap -mx-2">
         <div className="w-1/2 px-2">
+          {messageSend !== "" && (
+            <div className="my-2 border p-2 border-r-primary rounded font-bold text-sm">
+              {messageSend}
+            </div>
+          )}
           <form onSubmit={sendEmail} className="flex flex-col gap-5">
             <input
               required
@@ -62,7 +88,9 @@ const Contact = () => {
               className="block w-full rounded-md shadow-sm border border-solid border-r-primary focus:border-r-primary focus:ring-offset-0  focus:ring-r-primary disabled:cursor-not-allowed bg-r-dark"
             />
             <div className="flex justify-end">
-              <Buttom type="submit">Enviar</Buttom>
+              <Buttom disabled={loading} type="submit">
+                Enviar
+              </Buttom>
             </div>
           </form>
         </div>
