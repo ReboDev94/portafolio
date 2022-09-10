@@ -1,11 +1,11 @@
 const Skills = () => {
   return (
-    <section id="skills" className="min-h-[calc(100vh-5rem)]">
-      <h1 className="text-r-primary font-extrabold text-3xl">
+    <section id="skills" className="md:min-h-[calc(100vh-5rem)] mt-10 md:mt-0">
+      <h1 className="text-r-primary font-extrabold text-2xl md:text-3xl">
         Mis habilidades
       </h1>
-      <div className="flex flex-wrap -mx-2 text-r-white mt-8">
-        <div className="w-2/5 px-2">
+      <div className="flex flex-wrap -mx-2 gap-5 md:gap-0 text-r-white mt-8">
+        <div className="w-full md:w-2/5 px-2">
           <h4 className="font-extrabold text-xl">Frontend</h4>
           <div className="flex flex-wrap mt-5">
             <div className="w-1/2">
@@ -28,43 +28,45 @@ const Skills = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/5 px-2">
-          <h4 className="font-extrabold text-xl">Backend</h4>
-          <div className="mt-5">
-            <ul className="font-semibold text-base list-disc list-inside">
-              <li className="py-1">JavaScript</li>
-              <li className="py-1">TypeScript</li>
-              <li className="py-1">PHP</li>
-              <li className="py-1">NodeJs</li>
-              <li className="py-1">Laravel</li>
-            </ul>
+        <div className="w-full md:w-2/5 px-2">
+          <div className="flex flex-wrap">
+            <div className="w-1/2">
+              <h4 className="font-extrabold text-xl mb-5">Backend</h4>
+              <ul className="font-semibold text-base list-disc list-inside">
+                <li className="py-1">JavaScript</li>
+                <li className="py-1">TypeScript</li>
+                <li className="py-1">PHP</li>
+                <li className="py-1">NodeJs</li>
+                <li className="py-1">Laravel</li>
+              </ul>
+            </div>
+            <div className="w-1/2">
+              <h4 className="font-extrabold text-xl mb-5">DB</h4>
+              <ul className="font-semibold text-base list-disc list-inside">
+                <li className="py-1">MySql</li>
+                <li className="py-1">PosgreSql</li>
+                <li className="py-1">MongoDB</li>
+                <li className="py-1">Firebase</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="w-1/5 px-2">
-          <h4 className="font-extrabold text-xl">DB</h4>
-          <div className="mt-5">
-            <ul className="font-semibold text-base list-disc list-inside">
-              <li className="py-1">MySql</li>
-              <li className="py-1">PosgreSql</li>
-              <li className="py-1">MongoDB</li>
-              <li className="py-1">Firebase</li>
-            </ul>
-          </div>
-        </div>
-        <div className="w-1/5 px-2">
+        <div className="w-full md:w-1/5 px-2">
           <h4 className="font-extrabold text-xl">Otros</h4>
-          <div className="mt-5">
-            <ul className="font-semibold text-base list-disc list-inside">
-              <li className="py-1">Git & Github</li>
-              <li className="py-1">Postman</li>
-              <li className="py-1">Slack</li>
-              <li className="py-1">Notion</li>
-              <li className="py-1">Visual studio code</li>
-            </ul>
+          <div className="flex flex-wrap mt-5">
+            <div className="w-full">
+              <ul className="font-semibold text-base list-disc list-inside">
+                <li className="py-1">Git & Github</li>
+                <li className="py-1">Postman</li>
+                <li className="py-1">Slack</li>
+                <li className="py-1">Notion</li>
+                <li className="py-1">Visual studio code</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-      <div className="flex justify-between mt-14">
+      <div className="flex flex-wrap gap-5 justify-between mt-8 md:mt-14">
         <img className="h-10 w-10" src="/assets/svg/skills/php.svg" alt="php" />
         <img className="h-10 w-10" src="/assets/svg/skills/js.svg" alt="js" />
         <img className="h-10 w-10" src="/assets/svg/skills/ts.svg" alt="ts" />
@@ -100,6 +102,11 @@ const Skills = () => {
           alt="mongo"
         />
         <img className="h-10 w-10" src="/assets/svg/skills/git.svg" alt="git" />
+        <img
+          className="h-10 w-10"
+          src="/assets/svg/skills/tailwind.svg"
+          alt="tailwind"
+        />
       </div>
     </section>
   );

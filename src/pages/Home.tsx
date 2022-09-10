@@ -3,9 +3,12 @@ import Buttom from "../ui/components/Button";
 
 const Home = () => {
   return (
-    <section id="home" className="min-h-[calc(100vh-5rem)] flex">
-      <div className="w-4/6 flex flex-nowrap gap-5">
-        <div className="flex flex-col items-center justify-center gap-5 w-14 h-full">
+    <section
+      id="home"
+      className="pt-10 md:pt-0 min-h-[calc(100vh-5rem)] flex flex-col md:flex-row"
+    >
+      <div className="order-2 md:order-1 w-full md:w-4/6 flex flex-nowrap flex-col-reverse md:flex-row gap-10 md:gap-5 mt-5 text-center md:text-left">
+        <div className="flex flex-row md:flex-col items-center justify-center gap-5 w-full md:w-14 h-full">
           <a
             href="https://github.com/ReboDev94"
             target="_blank"
@@ -53,12 +56,12 @@ const Home = () => {
         </div>
         <div className="flex-1 flex flex-col justify-center gap-5">
           <p className="text-lg font-bold text-r-primary">Hola mi nombre es</p>
-          <span className="text-5xl text-r-white font-extrabold">
+          <span className="text-3xl md:text-5xl text-r-white font-extrabold">
             <p>Rafael de Jesús</p>
             <p>Rebolledo Hernández</p>
           </span>
           <p className="text-lg font-bold text-r-white">Full Stack Developer</p>
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-center md:justify-start">
             <Link
               to="contact"
               spy={true}
@@ -68,22 +71,18 @@ const Home = () => {
             >
               <Buttom>Contactame</Buttom>
             </Link>
-            <a>
+            <a href="/assets/pdf/cv.pdf" download="cv.pdf">
               <Buttom>CV</Buttom>
             </a>
           </div>
         </div>
       </div>
-      <div className="w-2/6 flex justify-center items-center">
-        <div className="flex flex-wrap justify-center">
-          <div className="px-4">
-            <img
-              src="/assets/img/profile.jpg"
-              alt="profile"
-              className="shadow-md shadow-r-primary rounded-full max-w-full h-auto align-middle border-none"
-            />
-          </div>
-        </div>
+      <div className="order-1 md:order-2 w-full md:w-2/6 flex items-center justify-center">
+        <img
+          src="/assets/img/profile.jpg"
+          alt="profile"
+          className="shadow-md shadow-r-primary h-40 w-40 md:w-64 md:h-64 rounded-full"
+        />
       </div>
     </section>
   );

@@ -29,7 +29,7 @@ const ProjectsCard: React.FC<IProjectProps> = ({
   project: { title, description, img, technologies, sitio, repo },
 }) => {
   return (
-    <div className="w-1/3 px-5 py-5">
+    <div className="w-full md:w-1/3  md:px-5 py-5">
       <div className="border p-4 bg-r-white text-r-dark shadow-card-project shadow-r-primary">
         <h4 className="font-bold mb-5">{title}</h4>
         <p className="mb-5 line-clamp-2 text-ellipsis h-12">{description}</p>
@@ -39,7 +39,7 @@ const ProjectsCard: React.FC<IProjectProps> = ({
           {technologies.map((technology) => (
             <img
               key={technology}
-              className="h-8 w-8"
+              className="h-6 w-6 md:h-8 md:w-8"
               src={"/assets/svg/skills/" + technology + ".svg"}
               alt={technology}
             />

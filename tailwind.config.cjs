@@ -17,7 +17,7 @@ module.exports = {
         'r-blue': '#28536b'
       },
       boxShadow: {
-        'card-project': '15px 15px 0px 0px',
+        'card-project': '8px 8px 0px 0px',
       }
     },
   },

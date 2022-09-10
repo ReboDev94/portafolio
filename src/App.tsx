@@ -7,9 +7,9 @@ import Navbar from "./ui/components/Navbar";
 
 const App = () => {
   return (
-    <div className="container mx-auto px-10">
+    <div className="container mx-auto md:px-10">
       <Navbar />
-      <div className="px-24">
+      <div className="w-full px-5 md:px-24">
         <Home />
         <About />
         <Skills />
