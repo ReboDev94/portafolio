@@ -26,6 +26,11 @@ const contacts: {
     path: 'https://api.whatsapp.com/send?phone=7471333871',
     icon: '/assets/svg/phone.svg',
   },
+  {
+    name: 'email',
+    path: 'mailto:rrrrebolledohdz@gmail.com',
+    icon: '/assets/svg/email.svg',
+  },
 ];
 
 const Home = () => {
@@ -50,13 +55,6 @@ const Home = () => {
               />
             </a>
           ))}
-          <a href="mailto:rrrrebolledohdz@gmail.com">
-            <img
-              src="/assets/svg/email.svg"
-              className="h-7 w-7"
-              alt="email"
-            />
-          </a>
         </div>
         <div className="flex-1 flex flex-col justify-center gap-5">
           <p className="text-lg font-bold text-r-primary">
