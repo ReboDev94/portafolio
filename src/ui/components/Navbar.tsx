@@ -35,7 +35,10 @@ const Navbar = () => {
             {"<ReboDev />"}
           </h1>
           {sidebar && (
-            <div className="lg:hidden z-[60] fixed bg-black inset-0 opacity-20 block transition-opacity"></div>
+            <div
+              onClick={() => setSidebar(false)}
+              className="lg:hidden z-[60] fixed bg-black inset-0 opacity-20 block transition-opacity"
+            ></div>
           )}
           <div
             className={classNames(
