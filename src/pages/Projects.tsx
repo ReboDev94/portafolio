@@ -21,15 +21,12 @@ const projectsAll: IProjectProps["project"][] = [
 ];
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="md:min-h-[calc(100vh-5rem)] mt-10 md:mt-0"
-    >
-      <h1 className="text-r-primary font-extrabold text-2xl md:text-3xl">
+    <section id="projects" className="min-h-[calc(100vh-5rem)] mt-10 lg:mt-0">
+      <h1 className="text-r-primary font-extrabold text-2xl lg:text-3xl">
         Proyectos
       </h1>
       <div className="w-full mt-10">
-        <div className="flex flex-wrap md:-mx-5 -my-5">
+        <div className="flex flex-wrap md:-mx-5 lg:-mx-5 -my-5">
           {projectsAll.map((project) => (
             <ProjectsCard key={project.title} project={project} />
           ))}

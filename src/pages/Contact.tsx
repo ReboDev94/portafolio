@@ -45,15 +45,15 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="md:min-h-[calc(100vh-5rem)]  py-12">
-      <h1 className="text-r-primary font-extrabold text-3xl mb-5">
+    <section id="contact" className="min-h-[calc(100vh-5rem)]  py-12">
+      <h1 className="text-r-primary font-extrabold text-2xl lg:text-3xl mb-5">
         Contactame
       </h1>
       <p className="text-r-white font-medium text-lg">
         Creemos cosas nuevas, trabajemos juntos.
       </p>
       <div className="mt-5 flex flex-wrap -mx-2">
-        <div className="w-full md:w-1/2 px-2">
+        <div className="w-full lg:w-1/2 px-2">
           {messageSend !== "" && (
             <div className="my-2 border p-2 border-r-primary rounded font-bold text-sm">
               {messageSend}
@@ -94,7 +94,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="w-1/2 px-2 md:grid place-content-center hidden">
+        <div className="w-1/2 px-2 lg:grid place-content-center hidden">
           <img
             src="/assets/svg/contactme.svg"
             alt="contactame"
