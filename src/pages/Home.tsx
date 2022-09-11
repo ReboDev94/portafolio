@@ -1,26 +1,30 @@
-import { Link } from "react-scroll";
-import Buttom from "../ui/components/Button";
+import { Link } from 'react-scroll';
+import Button from '../ui/components/Button';
 
-const contacts: { name: string; path: string; icon: string }[] = [
+const contacts: {
+  name: string;
+  path: string;
+  icon: string;
+}[] = [
   {
-    name: "github",
-    path: "https://github.com/ReboDev94",
-    icon: "/assets/svg/github.svg",
+    name: 'github',
+    path: 'https://github.com/ReboDev94',
+    icon: '/assets/svg/github.svg',
   },
   {
-    name: "linkedin",
-    path: "https://www.linkedin.com/in/rafael-de-jesus-rebolledo-hern%C3%A1ndez-rebodev/",
-    icon: "/assets/svg/linkedin.svg",
+    name: 'linkedin',
+    path: 'https://www.linkedin.com/in/rafael-de-jesus-rebolledo-hern%C3%A1ndez-rebodev/',
+    icon: '/assets/svg/linkedin.svg',
   },
   {
-    name: "facebook",
-    path: "https://www.facebook.com/rebolledohernandez/",
-    icon: "/assets/svg/facebook.svg",
+    name: 'facebook',
+    path: 'https://www.facebook.com/rebolledohernandez/',
+    icon: '/assets/svg/facebook.svg',
   },
   {
-    name: "phone",
-    path: "https://api.whatsapp.com/send?phone=7471333871",
-    icon: "/assets/svg/phone.svg",
+    name: 'phone',
+    path: 'https://api.whatsapp.com/send?phone=7471333871',
+    icon: '/assets/svg/phone.svg',
   },
 ];
 
@@ -37,22 +41,34 @@ const Home = () => {
               key={name}
               href={path}
               target="_blank"
-              referrerPolicy="no-referrer"
+              rel="noreferrer"
             >
-              <img src={icon} className="h-7 w-7" alt={name} />
+              <img
+                src={icon}
+                className="h-7 w-7"
+                alt={name}
+              />
             </a>
           ))}
           <a href="mailto:rrrrebolledohdz@gmail.com">
-            <img src="/assets/svg/email.svg" className="h-7 w-7" alt="email" />
+            <img
+              src="/assets/svg/email.svg"
+              className="h-7 w-7"
+              alt="email"
+            />
           </a>
         </div>
         <div className="flex-1 flex flex-col justify-center gap-5">
-          <p className="text-lg font-bold text-r-primary">Hola mi nombre es</p>
+          <p className="text-lg font-bold text-r-primary">
+            Hola mi nombre es
+          </p>
           <span className="text-3xl lg:text-5xl text-r-white font-extrabold">
             <p>Rafael de Jesús</p>
             <p>Rebolledo Hernández</p>
           </span>
-          <p className="text-lg font-bold text-r-white">Full Stack Developer</p>
+          <p className="text-lg font-bold text-r-white">
+            Full Stack Developer
+          </p>
           <div className="flex gap-2 justify-center lg:justify-start">
             <Link
               to="contact"
@@ -61,10 +77,10 @@ const Home = () => {
               offset={-100}
               duration={500}
             >
-              <Buttom>Contactame</Buttom>
+              <Button>Contactame</Button>
             </Link>
             <a href="/assets/pdf/cv.pdf" download="cv.pdf">
-              <Buttom>CV</Buttom>
+              <Button>CV</Button>
             </a>
           </div>
         </div>

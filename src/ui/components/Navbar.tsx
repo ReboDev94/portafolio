@@ -1,19 +1,19 @@
-import { Link } from "react-scroll";
-import { useState } from "react";
-import classNames from "classnames";
+import { Link } from 'react-scroll';
+import { useState } from 'react';
+import classNames from 'classnames';
 
 const menu: { path: string; title: string }[] = [
   {
-    path: "home",
-    title: "Inicio",
+    path: 'home',
+    title: 'Inicio',
   },
   {
-    path: "about",
-    title: "Sobre mi",
+    path: 'about',
+    title: 'Sobre mi',
   },
-  { path: "skills", title: "Habilidades" },
-  { path: "projects", title: "Proyectos" },
-  { path: "contact", title: "Contacto" },
+  { path: 'skills', title: 'Habilidades' },
+  { path: 'projects', title: 'Proyectos' },
+  { path: 'contact', title: 'Contacto' },
 ];
 
 const Navbar = () => {
@@ -32,7 +32,7 @@ const Navbar = () => {
         </button>
         <div className="flex">
           <h1 className="text-r-primary text-xl font-extrabold lg:mr-8">
-            {"<ReboDev />"}
+            {'<ReboDev />'}
           </h1>
           {sidebar && (
             <div
@@ -42,12 +42,16 @@ const Navbar = () => {
           )}
           <div
             className={classNames(
-              "transition-all delay-150 lg:ml-0 w-52 flex h-screen lg:h-auto bg-r-dark lg:w-fit items-center lg:items-end gap-5 lg:gap-8 xl:gap-14 pt-24 lg:pt-0 absolute lg:relative z-[65] left-0 top-0 flex-col lg:flex-row shadow-lg lg:shadow-none shadow-r-primary text-r-white font-extrabold",
-              { "ml-0": sidebar, "-ml-60": !sidebar }
+              'transition-all delay-150 lg:ml-0 w-52 flex h-screen lg:h-auto bg-r-dark lg:w-fit items-center lg:items-end gap-5 lg:gap-8 xl:gap-14 pt-24 lg:pt-0 absolute lg:relative z-[65] left-0 top-0 flex-col lg:flex-row shadow-lg lg:shadow-none shadow-r-primary text-r-white font-extrabold',
+              { 'ml-0': sidebar, '-ml-60': !sidebar },
             )}
           >
             <button onClick={() => setSidebar(false)}>
-              <img className="lg:hidden" src="/assets/svg/icon-x.svg" alt="x" />
+              <img
+                className="lg:hidden"
+                src="/assets/svg/icon-x.svg"
+                alt="x"
+              />
             </button>
             {menu.map(({ path, title }) => (
               <Link
@@ -66,8 +70,16 @@ const Navbar = () => {
           </div>
         </div>
         <div className="lg:flex gap-3 hidden">
-          <img src="/assets/svg/cat.svg" className="h-7 w-7" alt="cat1" />
-          <img src="/assets/svg/cat.svg" className="h-7 w-7" alt="cat2" />
+          <img
+            src="/assets/svg/cat.svg"
+            className="h-7 w-7"
+            alt="cat1"
+          />
+          <img
+            src="/assets/svg/cat.svg"
+            className="h-7 w-7"
+            alt="cat2"
+          />
         </div>
       </div>
     </nav>

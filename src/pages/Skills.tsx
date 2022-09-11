@@ -1,12 +1,17 @@
 const Skills = () => {
   return (
-    <section id="skills" className="min-h-[calc(100vh-5rem)] mt-10 lg:mt-0">
+    <section
+      id="skills"
+      className="min-h-[calc(100vh-5rem)] mt-10 lg:mt-0"
+    >
       <h1 className="text-r-primary font-extrabold text-2xl lg:text-3xl">
         Mis habilidades
       </h1>
       <div className="flex flex-wrap -mx-2 gap-5 lg:gap-0 text-r-white mt-8">
         <div className="w-full lg:w-2/5 px-2">
-          <h4 className="font-extrabold text-xl">Frontend</h4>
+          <h4 className="font-extrabold text-xl">
+            Frontend
+          </h4>
           <div className="flex flex-wrap mt-5">
             <div className="w-1/2">
               <ul className="font-semibold text-base list-disc list-inside">
@@ -31,7 +36,9 @@ const Skills = () => {
         <div className="w-full lg:w-2/5 px-2">
           <div className="flex flex-wrap">
             <div className="w-1/2">
-              <h4 className="font-extrabold text-xl mb-5">Backend</h4>
+              <h4 className="font-extrabold text-xl mb-5">
+                Backend
+              </h4>
               <ul className="font-semibold text-base list-disc list-inside">
                 <li className="py-1">JavaScript</li>
                 <li className="py-1">TypeScript</li>
@@ -41,7 +48,9 @@ const Skills = () => {
               </ul>
             </div>
             <div className="w-1/2">
-              <h4 className="font-extrabold text-xl mb-5">DB</h4>
+              <h4 className="font-extrabold text-xl mb-5">
+                DB
+              </h4>
               <ul className="font-semibold text-base list-disc list-inside">
                 <li className="py-1">MySql</li>
                 <li className="py-1">PosgreSql</li>
@@ -67,10 +76,26 @@ const Skills = () => {
         </div>
       </div>
       <div className="flex flex-wrap gap-5 justify-between mt-8 lg:mt-14">
-        <img className="h-10 w-10" src="/assets/svg/skills/php.svg" alt="php" />
-        <img className="h-10 w-10" src="/assets/svg/skills/js.svg" alt="js" />
-        <img className="h-10 w-10" src="/assets/svg/skills/ts.svg" alt="ts" />
-        <img className="h-10 w-10" src="/assets/svg/skills/vue.svg" alt="vue" />
+        <img
+          className="h-10 w-10"
+          src="/assets/svg/skills/php.svg"
+          alt="php"
+        />
+        <img
+          className="h-10 w-10"
+          src="/assets/svg/skills/js.svg"
+          alt="js"
+        />
+        <img
+          className="h-10 w-10"
+          src="/assets/svg/skills/ts.svg"
+          alt="ts"
+        />
+        <img
+          className="h-10 w-10"
+          src="/assets/svg/skills/vue.svg"
+          alt="vue"
+        />
         <img
           className="h-10 w-10"
           src="/assets/svg/skills/react.svg"
@@ -101,7 +126,11 @@ const Skills = () => {
           src="/assets/svg/skills/mongo.svg"
           alt="mongo"
         />
-        <img className="h-10 w-10" src="/assets/svg/skills/git.svg" alt="git" />
+        <img
+          className="h-10 w-10"
+          src="/assets/svg/skills/git.svg"
+          alt="git"
+        />
         <img
           className="h-10 w-10"
           src="/assets/svg/skills/tailwind.svg"

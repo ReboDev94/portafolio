@@ -1,18 +1,18 @@
-import React from "react";
-import Buttom from "./Button";
+import React from 'react';
+import Buttom from './Button';
 export type Technologies =
-  | "angular"
-  | "git"
-  | "js"
-  | "laravel"
-  | "mongo"
-  | "mysql"
-  | "node"
-  | "php"
-  | "react"
-  | "ts"
-  | "vue"
-  | "tailwind";
+  | 'angular'
+  | 'git'
+  | 'js'
+  | 'laravel'
+  | 'mongo'
+  | 'mysql'
+  | 'node'
+  | 'php'
+  | 'react'
+  | 'ts'
+  | 'vue'
+  | 'tailwind';
 
 export interface IProjectProps {
   project: {
@@ -26,13 +26,22 @@ export interface IProjectProps {
 }
 
 const ProjectsCard: React.FC<IProjectProps> = ({
-  project: { title, description, img, technologies, sitio, repo },
+  project: {
+    title,
+    description,
+    img,
+    technologies,
+    sitio,
+    repo,
+  },
 }) => {
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 md:px-5 lg:px-5 py-5">
       <div className="border p-4 bg-r-white text-r-dark shadow-card-project shadow-r-primary">
         <h4 className="font-bold mb-5">{title}</h4>
-        <p className="mb-5 line-clamp-2 text-ellipsis h-12">{description}</p>
+        <p className="mb-5 line-clamp-2 text-ellipsis h-12">
+          {description}
+        </p>
         <img
           src={img}
           alt={title}
@@ -44,16 +53,18 @@ const ProjectsCard: React.FC<IProjectProps> = ({
             <img
               key={technology}
               className="h-6 w-6"
-              src={"/assets/svg/skills/" + technology + ".svg"}
+              src={
+                '/assets/svg/skills/' + technology + '.svg'
+              }
               alt={technology}
             />
           ))}
         </div>
         <div className="flex gap-3 justify-end">
-          <a href={sitio} target="_blank" referrerPolicy="no-referrer">
+          <a href={sitio} target="_blank" rel="noreferrer">
             <Buttom variant="dark">Sitio</Buttom>
           </a>
-          <a href={repo} target="_blank" referrerPolicy="no-referrer">
+          <a href={repo} target="_blank" rel="noreferrer">
             <Buttom variant="dark">Repositorio</Buttom>
           </a>
         </div>

@@ -1,20 +1,20 @@
-import { ChangeEvent, FormEvent, useState } from "react";
-import axios from "axios";
-import Buttom from "../ui/components/Button";
+import { ChangeEvent, FormEvent, useState } from 'react';
+import axios from 'axios';
+import Buttom from '../ui/components/Button';
 
 const initData = {
-  name: "",
-  email: "",
-  message: "",
+  name: '',
+  email: '',
+  message: '',
 };
 const Contact = () => {
-  const [messageSend, setMessageSend] = useState("");
+  const [messageSend, setMessageSend] = useState('');
   const [loading, setLoading] = useState(false);
   const [formContact, setFormContact] = useState(initData);
   const { name, email, message } = formContact;
 
   const onInputChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormContact({ ...formContact, [name]: value });
@@ -23,21 +23,23 @@ const Contact = () => {
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setMessageSend("");
+    setMessageSend('');
     axios({
-      method: "POST",
-      url: "https://formbold.com/s/6QO53",
+      method: 'POST',
+      url: 'https://formbold.com/s/6QO53',
       data: formContact,
     })
-      .then((r) => {
+      .then(() => {
         setMessageSend(
-          "He recibido tu mensaje, muy pronto me pondre en contacto contigo, gracias."
+          'He recibido tu mensaje, muy pronto me pondre en contacto contigo, gracias.',
         );
         setFormContact(initData);
       })
-      .catch((r) => {
-        setMessageSend("Ocurrio un error, por favor intentalo mas tarde");
-        console.log("error");
+      .catch(() => {
+        setMessageSend(
+          'Ocurrio un error, por favor intentalo mas tarde',
+        );
+        console.log('error');
       })
       .finally(() => {
         setLoading(false);
@@ -45,7 +47,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-[calc(100vh-5rem)]  py-12">
+    <section
+      id="contact"
+      className="min-h-[calc(100vh-5rem)]  py-12"
+    >
       <h1 className="text-r-primary font-extrabold text-2xl lg:text-3xl mb-5">
         Contactame
       </h1>
@@ -54,12 +59,15 @@ const Contact = () => {
       </p>
       <div className="mt-5 flex flex-wrap -mx-2">
         <div className="w-full lg:w-1/2 px-2">
-          {messageSend !== "" && (
+          {messageSend !== '' && (
             <div className="my-2 border p-2 border-r-primary rounded font-bold text-sm">
               {messageSend}
             </div>
           )}
-          <form onSubmit={sendEmail} className="flex flex-col gap-5">
+          <form
+            onSubmit={sendEmail}
+            className="flex flex-col gap-5"
+          >
             <input
               required
               value={name}

@@ -1,0 +1,10 @@
+{
+  "prettier.configPath": ".prettierrc.cjs",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.options": {
+    "parserOptions": {
+      "createDefaultProgram": true
+    }
+  }
+}
