@@ -53,7 +53,7 @@ const Skills = () => {
               </h4>
               <ul className="font-semibold text-base list-disc list-inside">
                 <li className="py-1">MySql</li>
-                <li className="py-1">PosgreSql</li>
+                <li className="py-1">PostgreSql</li>
                 <li className="py-1">MongoDB</li>
                 <li className="py-1">Firebase</li>
               </ul>

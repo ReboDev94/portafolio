@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import axios from 'axios';
-import Buttom from '../ui/components/Button';
+import Button from '../ui/components/Button';
 
 const initData = {
   name: '',
@@ -31,13 +31,13 @@ const Contact = () => {
     })
       .then(() => {
         setMessageSend(
-          'He recibido tu mensaje, muy pronto me pondre en contacto contigo, gracias.',
+          'He recibido tu mensaje, muy pronto me pondré en contacto contigo, gracias.',
         );
         setFormContact(initData);
       })
       .catch(() => {
         setMessageSend(
-          'Ocurrio un error, por favor intentalo mas tarde',
+          'Ocurrió un error, por favor inténtalo mas tarde',
         );
         console.log('error');
       })
@@ -52,7 +52,7 @@ const Contact = () => {
       className="min-h-[calc(100vh-5rem)]  py-12"
     >
       <h1 className="text-r-primary font-extrabold text-2xl lg:text-3xl mb-5">
-        Contactame
+        Contáctame
       </h1>
       <p className="text-r-white font-medium text-lg">
         Creemos cosas nuevas, trabajemos juntos.
@@ -91,21 +91,21 @@ const Contact = () => {
               value={message}
               onChange={(e) => onInputChange(e)}
               name="message"
-              placeholder="Escribeme un mensaje"
+              placeholder="Escríbeme un mensaje"
               rows={4}
               className="block w-full rounded-md shadow-sm border border-solid border-r-primary focus:border-r-primary focus:ring-offset-0  focus:ring-r-primary disabled:cursor-not-allowed bg-r-dark"
             />
             <div className="flex justify-end">
-              <Buttom disabled={loading} type="submit">
+              <Button disabled={loading} type="submit">
                 Enviar
-              </Buttom>
+              </Button>
             </div>
           </form>
         </div>
         <div className="w-1/2 px-2 lg:grid place-content-center hidden">
           <img
             src="/assets/svg/contactme.svg"
-            alt="contactame"
+            alt="contáctame"
             className="h-80 w-80"
           />
         </div>

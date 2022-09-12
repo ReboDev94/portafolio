@@ -75,7 +75,7 @@ const Home = () => {
               offset={-100}
               duration={500}
             >
-              <Button>Contactame</Button>
+              <Button>Contáctame</Button>
             </Link>
             <a href="/assets/pdf/cv.pdf" download="cv.pdf">
               <Button>CV</Button>

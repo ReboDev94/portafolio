@@ -4,7 +4,7 @@ import ProjectsCard, {
 
 const projectsAll: IProjectProps['project'][] = [
   {
-    title: 'Portalio profesional',
+    title: 'Portafolio profesional',
     description: 'Mi portafolio profesional',
     img: '/assets/img/portafolio.png',
     technologies: ['ts', 'react', 'git', 'tailwind'],

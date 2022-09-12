@@ -1,5 +1,5 @@
 import React from 'react';
-import Buttom from './Button';
+import Button from './Button';
 export type Technologies =
   | 'angular'
   | 'git'
@@ -47,7 +47,7 @@ const ProjectsCard: React.FC<IProjectProps> = ({
           alt={title}
           className="object-fill h-40 lg:h-32 w-full mb-5"
         />
-        <h5 className="font-bold mb-2">Tecnologias</h5>
+        <h5 className="font-bold mb-2">Tecnologías</h5>
         <div className="flex gap-5 mb-5">
           {technologies.map((technology) => (
             <img
@@ -62,10 +62,10 @@ const ProjectsCard: React.FC<IProjectProps> = ({
         </div>
         <div className="flex gap-3 justify-end">
           <a href={sitio} target="_blank" rel="noreferrer">
-            <Buttom variant="dark">Sitio</Buttom>
+            <Button variant="dark">Sitio</Button>
           </a>
           <a href={repo} target="_blank" rel="noreferrer">
-            <Buttom variant="dark">Repositorio</Buttom>
+            <Button variant="dark">Repositorio</Button>
           </a>
         </div>
       </div>

@@ -19,13 +19,13 @@ const About = () => (
             a los cambios y aprendizaje constante.
           </p>
           <p>
-            Me apasiona la tecnologia y lo que podemos hacer
+            Me apasiona la tecnología y lo que podemos hacer
             con ella, aportando mis conocimientos,
             habilidades y experiencia para crear cosas
             nuevas y maravillosas.
           </p>
           <p>
-            Mis tecnologias favoritas para trabajar son
+            Mis tecnologías favoritas para trabajar son
             VueJs, ReactJS, Node y Laravel todo bajo un
             entorno linux.
             <img
